@@ -40,3 +40,12 @@ function scrollHeader(){
 }
 window.addEventListener('scroll', scrollHeader);
 
+const consentbtn = document.querySelector('consent-modal_btn')
+
+consentbtn.addEventListener("click",toggleDisclaimer)
+
+function toggleDisclaimer(){
+    document.querySelector(".consent-modal").style.display ="none"
+      document.querySelector("b").style.filter="blur(0px)"
+      document.body.style.overflowY="auto"
+}

@@ -96,27 +96,21 @@ body{
 }
 .btnlogin{
     width: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: var(--first-color);
+    background: #667eea;;
     color: var(--white-color);
-    border: 1px solid var(--first-color);
+    border: 1px solid #667eea;
     border-radius: 20px;
-    font-size: var(--normal-font-size);
+    font-size: var(--white-color);
     font-weight: bold;
-    text-transform: uppercase;
     line-height: 1rem;
     padding: 4px 8px;
     cursor: pointer;
     transition: all 0.4s ease;
-    margin-right: 25%;
     
 }
 .btnlogin:hover{
     background-color: transparent;
-    color: var(--first-color);
+    color: #667eea;
 }
 .btn2{
     width: 240px;
@@ -148,8 +142,11 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #667eea, #764ba2);
     font-family: Arial, sans-serif;
+    width: 100%;
+    padding: 7rem 0;
+    background-color: var(--main-color);
+    border-radius: 0 300px;
 }
 
 .wrapper {
@@ -226,7 +223,7 @@ body{
     
 }
 
-.btn1 {
+.btnlog {
     width: 100%;
     padding: 10px;
     background: #667eea;
@@ -238,7 +235,7 @@ body{
     transition: 0.3s;
 }
 
-.btn1:hover {
+.btnlog:hover {
     background: #5641a7;
 }
 
@@ -289,6 +286,7 @@ body{
     align-items: center;
     max-width: 5px;
     height: 0px;
+    margin-left: 2rem;
     transform: scale(0.5);
     padding: 2em;
 }
@@ -376,9 +374,16 @@ body{
     color: var(--first-color);
     margin: bottom 1.5em; ;
 }
+.accueil-content h2{
+    font-size: var(--normal-font-size);
+    margin: 0.2rem;
+    letter-spacing: 3px; 
+    color: var(--black-color);
+    margin: bottom 1.5em; ;
+}
 .accueil-content p{
     font-weight: 400;
-    margin: 0.8rem;
+    margin: 0.2rem;
     line-height: 1.5rem;
     text-align: justify;
     letter-spacing: 2px;
@@ -471,13 +476,63 @@ body{
     background-repeat: no-repeat;
     background-position: top left;
     z-index: -1;
+   
 }
 .reservation-content{
     display: flex;
     flex-wrap: wrap;
     margin-left: -5rem;
-   
+    overflow-y: hidden;
+    filter: blur(0px);
 } 
+.consent-modal{
+    position:fixed;
+    z-index: 15;
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+}
+.consent-modal_content{
+    background: #b7c1ee;
+    color: var(--white-color);
+    padding: 15px;
+    border-radius: 10px;
+    margin-block-end: 2px;
+    transition: all 0.4s ease;
+
+}
+
+.consent-modal_content:hover{
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+.consent-modal_text{
+    font-size:15px;
+    margin-block-end: 2px;
+
+
+}
+.consent-modal-choices{
+    display: flex;
+    justify-content: center;
+
+}
+.consent-modal-btn,
+.consent-modal-link{
+    min-inline-size: 125px;
+    padding-block: 5px;
+    padding-inline: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--white-color);
+    font-weight: 600;
+    border-radius: 5px;
+    
+
+}
+
+
 .reservation-content-description{
     width: 100%;
     max-width: 1200px;
@@ -816,14 +871,7 @@ margin-bottom: 1rem;
 
 
 /* End Footer Section*/
-/* Start login Section*/
 
-
-
-
-
-
-/* End login Section*/
 
 
 
@@ -857,6 +905,9 @@ margin-bottom: 1rem;
     .nav-toggle{
         display: block;
     }
+    .btnlogin{
+        font-size: var(--h3-font-size)
+    }
    .accueil .accueil-img img{
         display: none;
    }
@@ -867,7 +918,11 @@ margin-bottom: 1rem;
     justify-content: center;
     align-items: center;
    }
+   .btn{
+    margin-left:rem;
+   }
    .accueil-content h1{
+    margin-left: 1rem;
     font-size: var(--big-font-size);
    }
    .accueil-content p{
@@ -878,6 +933,10 @@ margin-bottom: 1rem;
    }
    .reservation-content-description{
     grid-template-columns: repeat(2, 1fr);
+   }
+   .reservation{
+    
+    
    }
    .temoignages-card{
     width: 820px;
@@ -909,3 +968,7 @@ margin-bottom: 1rem;
         grid-template-columns:unset;
         }
     }
+    .reservation{
+        
+        
+       }
